@@ -1,43 +1,55 @@
 .fp-watermark{
     display: none;
 }
-
-#loader{
-    width: 100%;
-    height: 100vh;
-    z-index: 10000;
-    background-color: rgb(50, 174, 184);
+.preloader{
     position: absolute;
     top: 0;
     left: 0;
-    /* transition: 0.3s ease-in-out; */
-
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(50, 174, 184);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.spinner{
-    width: 80px;
-    height: 80px;
-    
-    border: 2px solid #f3f3f3;
-    border-top:3px solid #1E5C8C;
-    border-radius: 100%;
-    
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right: 0;
-    margin: auto;
-    
-    animation: spin 1s infinite linear;
+#loader {
+
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #1D5584;
+    /* Dark Green */
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 28px;
+    animation: spinloader 2s linear infinite;
 }
 
-@keyframes spin {
-    from{
+#loader img {
+    height: 200px;
+    width: 200px;
+    animation: spinlogo 2s linear infinite;
+}
+
+@keyframes spinloader {
+    0% {
         transform: rotate(0deg);
-    }to{
+    }
+
+    100% {
         transform: rotate(360deg);
     }
 }
-.f{
-    transition: 0.3s ease-in-out;
+
+@keyframes spinlogo {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+#fullpage .section img{
+    width: 90%;
 }
